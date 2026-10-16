@@ -1,10 +1,9 @@
 # solominers Umbrel App Store
 
-A community app store for umbrelOS with the solominers mining apps.
+A community app store for umbrelOS with the DATUM Verified app.
 
 | App | What it does | Port |
 | --- | --- | --- |
-| **DATUM BTCB2** (`solominers-datum-gateway-btcb2`) | BLAKE2b DATUM Gateway pre-configured for the BTCB2 pool (`datum.btcb2.com:28915`). Your node builds the templates; miners connect on your LAN. | stratum `23340`, dashboard `21010` |
 | **DATUM Verified** (`solominers-datum-verified`) | Discord and Telegram bots that verify members are mining through a DATUM Gateway before granting access. | `30047` |
 
 ## Add the store to your Umbrel
@@ -16,21 +15,18 @@ A community app store for umbrelOS with the solominers mining apps.
 
 ## Moving from the older stores
 
-These apps used to be published as `btcb2-datum-gateway-btcb2` (BTCB2 store)
-and `datum-verified`. Umbrel treats apps from a different store as different
-apps, and they use the same ports, so:
+DATUM Verified used to be published as `datum-verified` (DATUM Verified
+store). Umbrel treats apps from a different store as different apps, and they
+use the same port, so:
 
-1. Note your settings: the payout address in the gateway's Config tab, and the
-   Discord/Telegram bot tokens and server/chat ids in DATUM Verified.
+1. Note your settings: the Discord/Telegram bot tokens and server/chat ids.
 2. Uninstall the old app.
-3. Install the same app from **solominers** and enter the settings again.
-4. Point miners at `stratum+tcp://<umbrel-lan-ip>:23340` as before.
+3. Install DATUM Verified from **solominers** and enter the settings again.
 
 ## Layout
 
 ```text
 umbrel-app-store.yml
-solominers-datum-gateway-btcb2/
 solominers-datum-verified/
 ```
 
